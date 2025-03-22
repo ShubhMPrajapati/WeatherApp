@@ -6,6 +6,25 @@
    box-sizing: border-box;
    font-family: "Poppins", sans-serif;
    font-weight: 600;
+   color: white;
+}
+
+/* Footer */
+.footer {
+   text-align: center;
+   font-size: 14px;
+   font-weight: 400;
+   margin-top: 20px;
+   padding: 10px 0;
+   background: rgba(0, 0, 0, 0.15);
+   border-radius: 8px;
+
+} 
+.main-heading {
+   text-align: center;
+   font-size: 24px;
+   font-weight: bold;
+   margin-bottom: 20px;
 }
 
 body {
@@ -27,8 +46,9 @@ body::before {
    height: 100vh;
    background: rgba(0, 0, 0, 0.15);
    backdrop-filter: blur(4px);
-   z-index: -1;
+   z-index: 1;
 }
+
 
 /* Utility Classes */
 .regular-text {
@@ -41,15 +61,28 @@ body::before {
 
 
 /* Main Container */
-.main-container {
+/* .main-container {
    width: 300px;
    height: 480px;
    z-index: 1;
    background: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.25));
-   border-radius: 12px;
-   backdrop-filter: blur(15px);
    background-color: rgba(255, 255, 255, 0.2);
+   border-radius: 12px;
+   backdrop-filter: blur(100px);
    padding: 20px;
+} */
+
+.main-container {
+   width: 100%;
+   max-width: 400px;
+   background: rgba(255, 255, 255, 0.2);
+   padding: 20px;
+   z-index: 1;
+   background: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.25));
+   background-color: rgba(255, 255, 255, 0.2);
+   border-radius: 10px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   margin: 0 ; /* Centering */
 }
 
 /* Input Container */
@@ -63,10 +96,10 @@ body::before {
    outline: none;
    transition: 0.25s border;
    color: #fff;
-}
+} 
 
 .city-input:focus {
-   border: 3px solid rgba(255, 255, 255, 0.4);
+   border: 3px solid rgba(0,0,0, 0.15);
 }
 
 .city-input::placeholder {
@@ -91,12 +124,19 @@ body::before {
 }
 
 /* Weather Info Section */
-.weather-info {
+/* .weather-info {
    border: 2px solid rgba(255, 255, 255, 0.2);
    padding: 10px;
    border-radius: 10px;
    display: none;
+} */
+
+.weather-info {
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
 }
+
 
 .location-date-container {
    display: flex;
